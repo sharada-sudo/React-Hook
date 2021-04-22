@@ -36,7 +36,17 @@ function App() {
         <p>Alphabetical characters only</p>
       )}
       <label>Last Name</label>
-      <input {...register("lastName", { pattern: /^[A-Za-z]+$/i })} />
+      <input
+        {...register("lastName", {
+          required: true,
+          maxLength: 20,
+          pattern: /^[A-Za-z]+$/i
+        })}
+      />
+      {errors?.lastName?.type === "required" && <p>This field is required</p>}
+      {errors?.lastName?.type === "maxLength" && (
+        <p>last name cannot exceed 20 characters</p>
+      )}
       {errors?.lastName?.type === "pattern" && (
         <p>Alphabetical characters only</p>
       )}
