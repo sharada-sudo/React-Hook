@@ -50,10 +50,11 @@ function App() {
       {errors?.lastName?.type === "pattern" && (
         <p>Alphabetical characters only</p>
       )}
-      <label>Age</label>
-      <input {...register("age", { min: 18, max: 99 })} />
-      {errors.age && (
-        <p>You Must be older then 18 and younger then 99 years old</p>
+      <label>Email</label>
+      <input {...register("email", {required:true,maxLength:30,pattern:/^[A-Za-z]+$/i})} />
+      {errors?.email?.type === "required" && <p>This field is required</p>}
+      {errors?.email?.type === "maxLength" && (
+        <p>last name cannot exceed 30 characters</p>
       )}
       <input type="submit" />
     </form>
