@@ -1,5 +1,5 @@
 body {
-  background: #0e101c;
+  background:gray;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -57,7 +57,7 @@ label {
 
 button[type="submit"],
 input[type="submit"] {
-  background: #ec5990;
+  background: #5968ec;
   color: white;
   text-transform: uppercase;
   border: none;
